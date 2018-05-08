@@ -1,0 +1,31 @@
+{
+  "name": "bank-robber",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/app.js --exec babel-node"
+  },
+  "dependencies": {
+    "babel-plugin-inline-dotenv": "^1.1.2",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "form-data": "^2.3.2",
+    "helmet": "^3.12.0",
+    "moment": "^2.22.1",
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5",
+    "truelayer-client": "^1.0.9"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "nodemon": "^1.17.3"
+  }
+}
