@@ -1,0 +1,28 @@
+version: '3'
+
+volumes:
+  node_modules_bank-account-helper:
+  node_modules_bank-robber:
+
+
+services:
+  bank-account-helper-2:
+    image: bank-account-helper-2
+    build: ./bank-account-helper
+    links:
+      - bank-robber-2
+    depends_on:
+      - bank-robber-2
+    volumes:
+      - ./bank-account-helper:/build
+      - node_modules_bank-account-helper:/build/node_modules/
+    ports:
+      - "4000:4000"
+  bank-robber-2:
+    image: bank-robber-2
+    build: ./bank-robber
+    volumes:
+      - ./bank-robber:/build
+      - node_modules_bank-robber:/build/node_modules/
+    ports:
+      - "5050:5050"
